@@ -9,7 +9,7 @@ body {
 
 .navbar {
     width: 100%;
-    background-color: rgb(30, 30, 30);
+    background: rgba(0, 0, 0, 0.92);
     position: fixed;
     overflow: auto;
     top: 0;
@@ -70,4 +70,79 @@ header>h2 {
 header>p {
     font-size: 1.3em;
     font-weight: 300;
+}
+
+a.button {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #0F71D6;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.button:hover {
+    background-color: #0F71F3;
+}
+
+.responsive {
+    float: center;
+    width: 24.99999%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .responsive {
+        width: 40%;
+        margin-bottom: 1em;
+        margin-right: 1em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 90%;
+    }
+}
+
+img {
+    width: 100%
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section>section {
+    padding-left: 3%;
+}
+
+.bouttonplus {
+    background-color: #FFF;
+    border: none;
+    color: grey;
+    padding: 0.3em 0.3em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 0.7em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 0.5em;
+    border: 2px solid #e7e7e7;
+}
+
+.bouttonplus:hover {
+    background-color: #e7e7e7;
 }
