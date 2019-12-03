@@ -60,6 +60,10 @@ main>header {
     margin-right: auto;
 }
 
+main {
+    background-color: #F8F9FA;
+}
+
 header>h2 {
     color: #6c757d;
     font-size: 2.5em;
@@ -149,3 +153,10 @@ section>section {
 .bouttonplus:hover {
     background-color: #e7e7e7;
 }
+
+footer {
+    box-shadow: 8px 8px 12px #aaa;
+    display: flex;
+    flex-wrap: wrap;
+}
+
