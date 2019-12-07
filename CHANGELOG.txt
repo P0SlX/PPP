@@ -1,0 +1,27 @@
+CHANGELOG
+
+v1.0
+- Construction de l\'92html de base\
+
+v1.1
+- Ajout du CSS de la navbar avec flex et buggy ajout de détection de définition d'écran
+- Ajout des logo fait maison en noir et en blanc (pour une future implémentation du mode sombre)
+
+v1.2
+- Ajout du CSS pour le main de la page (avec un flex un peu moins buggy)
+- Complétion du fichier HTML
+
+v1.2.1
+- Ajout d'un arrondi autour des "cards"
+
+v1.2.2
+- Création de la base du footer
+- Ajout du fichier permettant la demande et la localisation de l'utilisateur afin de classer les écoles par distance (implémentation future)
+
+v1.3
+- Finition du footer (maintenant responsive et fonctionnel)
+- Quelques améliorations dans le corps de la page notamment sur les espacements
+- La navbar est maintenant la même sur téléphone que celle sur PC
+- Ajout du support pour appareils avec encoches (type iPhone X, Google Pixel etc)
+- Correction d'un bug sous iOS qui affichait des bandes blanches sur les côtés en mode paysage (Safari)
+- Et quelques autres améliorations...

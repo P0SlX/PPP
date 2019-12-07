@@ -9,11 +9,10 @@ body {
 
 .navbar {
     width: 100%;
-    background: rgba(0, 0, 0, 0.92);
+    background: rgba(0, 0, 0, 0.89);
     position: fixed;
     overflow: auto;
     top: 0;
-    box-shadow: 0px 0px 20px grey;
 }
 
 .navbar a {
@@ -24,19 +23,7 @@ body {
     padding: 0.7em;
     color: white;
     text-decoration: none;
-}
-
-@media screen and (min-width: 651px) {
-    .navbar a {
-        padding-left: 15%;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .navbar a {
-        float: none;
-        display: block;
-    }
+    padding-left: 15%;
 }
 
 body>header>a>img {
@@ -62,6 +49,9 @@ main>header {
 
 article {
     background-color: #F8F9FA;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 header>h2 {
@@ -97,27 +87,13 @@ a.button:hover {
 
 .responsive {
     float: center;
-    width: 24.99999%;
+    flex-basis: 24.99999%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 1%;
+    margin: 1em;
     border-radius: 0.3em;
 }
 
-@media only screen and (max-width: 1200px) {
-    .responsive {
-        width: 40%;
-        margin-bottom: 1em;
-        margin-right: 1em;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 90%;
-    }
-}
-
-section >img {
+section>img {
     width: 100%;
     border-top-left-radius: 0.3em;
     border-top-right-radius: 0.3em;
@@ -131,16 +107,14 @@ article {
 
 section>section {
     padding-left: 3%;
+    padding-right: 3%;
 }
 
 .bouttonplus {
-    background-color: #FFF;
-    border: none;
     color: grey;
     padding: 0.3em 0.3em;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin-bottom: 0.7em;
     transition-duration: 0.4s;
@@ -148,15 +122,86 @@ section>section {
     background-color: white;
     border-radius: 0.5em;
     border: 2px solid #e7e7e7;
+    float: right;
 }
 
 .bouttonplus:hover {
     background-color: #e7e7e7;
 }
 
+p {
+    word-wrap: break-word;
+}
+
 footer {
     box-shadow: 8px 8px 12px #aaa;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 0;
+    bottom: 0;
 }
 
+footer>section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.apropos {
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.apropos>h2 {
+    margin-bottom: 0;
+}
+
+.contact {
+    flex-basis: 10%;
+    margin-left: 5em;
+    flex-grow: 1;
+}
+
+.contact>ul {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 0;
+}
+
+.contact>h2 {
+    flex-basis: 100%;
+    margin-bottom: 0;
+}
+
+.contact>ul>li>a {
+    color: #0F71D6;
+    text-decoration: none;
+}
+
+.contact>ul>li>a:hover {
+    color: #0F71F6
+}
+
+@media only screen and (max-width: 1200px) {
+    .responsive {
+        flex-basis: 40%;
+        margin-bottom: 1em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        flex-basis: 90%;
+        margin-bottom: 2em;
+    }
+    .navbar a {
+        padding-left: 10%;
+    }
+    .contact {
+        margin-left: 0;
+    }
+    .apropos {
+        flex-basis: 100%;
+    }
+}
