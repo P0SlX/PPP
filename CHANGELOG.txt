@@ -1,7 +1,7 @@
 CHANGELOG
 
 v1.0
-- Construction de l\'92html de base\
+- Construction de l'html de base
 
 v1.1
 - Ajout du CSS de la navbar avec flex et buggy ajout de détection de définition d'écran
