@@ -1,10 +1,10 @@
 html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
     margin: 0;
-    margin-top: 3em;
+    padding-top: 3em;
 }
 
 .navbar {
@@ -39,19 +39,12 @@ h1 {
     font-size: 1.5em;
 }
 
-main>header {
+main>section>header {
     text-align: center;
     padding: 4rem 2rem;
     max-width: 40rem;
     margin-left: auto;
     margin-right: auto;
-}
-
-article {
-    background-color: #F8F9FA;
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    padding-top: 2em;
-    padding-bottom: 2em;
 }
 
 header>h2 {
@@ -64,6 +57,13 @@ header>h2 {
 header>p {
     font-size: 1.3em;
     font-weight: 300;
+}
+
+article {
+    background-color: #F8F9FA;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 a.button {
@@ -157,6 +157,11 @@ footer>section {
     margin-bottom: 0;
 }
 
+.apropos>p {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
 .contact {
     flex-basis: 10%;
     margin-left: 5em;
@@ -203,5 +208,33 @@ footer>section {
     }
     .apropos {
         flex-basis: 100%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    article {
+        background-color: rgb(30, 30, 30);
+    }
+    .responsive,
+    .bouttonplus {
+        background-color: rgb(50, 50, 50);
+    }
+    .responsive,
+    .bouttonplus {
+        color: lightgray;
+        border-color: lightgray;
+    }
+    .bouttonplus:hover {
+        background-color: rgb(80, 80, 80);
+    }
+    body,
+    main>section {
+        background-color: rgb(40, 40, 40);
+    }
+    section>header>p,
+    section>header>h2,
+    .contact,
+    .apropos {
+        color: #7c868f;
     }
 }

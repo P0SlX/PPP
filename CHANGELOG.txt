@@ -25,3 +25,6 @@ v1.3
 - Ajout du support pour appareils avec encoches (type iPhone X, Google Pixel etc)
 - Correction d'un bug sous iOS qui affichait des bandes blanches sur les côtés en mode paysage (Safari)
 - Et quelques autres améliorations...
+
+v1.4(beta)
+- Ajout expérimental du mode sombre pour les appareils iOS 13 et supérieur ainsi que pour macOS Mojave et supérieur
