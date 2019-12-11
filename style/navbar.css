@@ -1,0 +1,32 @@
+.navbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.89);
+    position: fixed;
+    overflow: auto;
+    top: 0;
+}
+
+.navbar a {
+    flex-wrap: wrap;
+    display: flex;
+    float: left;
+    text-align: center;
+    padding: 0.7em;
+    color: white;
+    text-decoration: none;
+    padding-left: 15%;
+}
+
+body>header>a>img {
+    width: 13%;
+    height: 13%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+h1 {
+    margin: auto;
+    margin-left: 0.5em;
+    font-size: 1.5em;
+    font-weight: 450;
+}

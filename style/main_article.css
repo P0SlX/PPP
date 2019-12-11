@@ -1,0 +1,51 @@
+article {
+    background-color: rgb(245, 245, 245);
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.responsive {
+    float: center;
+    flex-basis: 24.99999%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1em;
+    border-radius: 0.3em;
+}
+
+section>img {
+    width: 100%;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+}
+
+section>section {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.bouttonplus {
+    color: grey;
+    padding: 0.3em 0.3em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 0.7em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 0.5em;
+    border: 2px solid #e7e7e7;
+    float: right;
+}
+
+.bouttonplus:hover {
+    background-color: #e7e7e7;
+}
+
+p {
+    word-wrap: break-word;
+}

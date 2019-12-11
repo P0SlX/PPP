@@ -26,5 +26,9 @@ v1.3
 - Correction d'un bug sous iOS qui affichait des bandes blanches sur les côtés en mode paysage (Safari)
 - Et quelques autres améliorations...
 
-v1.4(beta)
+v1.4b
 - Ajout expérimental du mode sombre pour les appareils iOS 13 et supérieur ainsi que pour macOS Mojave et supérieur
+
+v1.4.1b
+- Amélioration du mode nuit et jour
+- Mise en place des "order" afin de pouvoir manipuler la place des cartes en JS pour la géolocalisation

@@ -1,0 +1,42 @@
+main>section>header {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main>section {
+    background-color: rgb(250, 250, 250);
+}
+
+header>h2 {
+    color: #6c757d;
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+header>p {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+a.button {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #0F71D6;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.button:hover {
+    background-color: #0F71F3;
+}
