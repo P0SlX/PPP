@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PPP Ingénieur</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="#" class="active">
+      <img src="./logob.png" alt="icone">
+      <h1>Le nom</h1>
+    </a>
+  </header>
+  <main>
+    <header>
+      <h2>École Ingénieurs et débouchés</h2>
+      <p>Voilà la liste des meilleurs écoles d'ingénieurs de la France pour l'informatique, vous pouvez choisir entre un classement global ou afficher les écoles les plus proches de vous !</p>
+      <a href="#" class="button">Écoles d'ingénieurs</a>
+      <a href="#" class="button">Débouchés</a>
+    </header>
+    <section class="#">
+      {% for (nom, descri) in infos %}
+      <section class="responsive">
+        <img src="iut.jpg" alt="">
+        <section>
+          <h2>{{nom}}</h2>
+          {% for (num, part1, part2) in descri %}
+          <p>
+            {{part1}}, {{part2}}, 
+            {{num}}
+          </p>
+          <a href="#" class="bouttonplus">En savoir plus</a>
+        </section>
+      </section>
+      {% endfor %}
+    </section>
+  </main>
+  <footer>
+    <p>Lorem Ipsum</p>
+    <p>Lorem Ipsum</p>
+  </footer>
+</body>
+
+</html>
