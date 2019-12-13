@@ -1,9 +1,11 @@
-function ChangeCSS() {
-    var checkBox = document.getElementByID("toggle");
-    if (checkBox.checked == true){
-      document.getElementById('pagestyle').setAttribute('href', './style/dark.css');
-    } 
-    else {
-        document.getElementById('pagestyle').setAttribute('href', './style/light.css');
-    }
+function ChangeCSS(){
+  var checkBox = document.getElementById('toggle');
+  var link = document.getElementById('pagestyle');
+  if (checkBox.checked == true){
+    link.href='./style/dark.css';
+    console.log('oui');
   }
+  else { 
+      link.href='./style/light.css';
+  }
+}

@@ -36,7 +36,7 @@ function SwapOrder(){
         var res = []
         for (var i = 0; i < length(listelatlon); i++) {
             res.append(CalculDistance(position, latlon))
-        
+            
         }
     }
 
