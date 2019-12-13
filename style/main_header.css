@@ -6,6 +6,10 @@ main>section>header {
     margin-right: auto;
 }
 
+main>section {
+    transition-duration: 0.5s;
+}
+
 header>h2 {
     color: #6c757d;
     font-size: 2.5em;

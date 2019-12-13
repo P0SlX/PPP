@@ -17,3 +17,7 @@ article {
 main>section {
     background-color: rgb(250, 250, 250);
 }
+
+.bouttonplus {
+    color: grey;
+}
