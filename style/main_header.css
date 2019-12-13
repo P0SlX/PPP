@@ -6,10 +6,6 @@ main>section>header {
     margin-right: auto;
 }
 
-main>section {
-    background-color: rgb(250, 250, 250);
-}
-
 header>h2 {
     color: #6c757d;
     font-size: 2.5em;

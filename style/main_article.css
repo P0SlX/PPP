@@ -1,5 +1,4 @@
 article {
-    background-color: rgb(245, 245, 245);
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     padding-top: 2em;
     padding-bottom: 2em;
@@ -36,14 +35,9 @@ section>section {
     margin-bottom: 0.7em;
     transition-duration: 0.4s;
     cursor: pointer;
-    background-color: white;
     border-radius: 0.5em;
     border: 2px solid #e7e7e7;
     float: right;
-}
-
-.bouttonplus:hover {
-    background-color: #e7e7e7;
 }
 
 p {

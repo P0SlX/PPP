@@ -1,0 +1,31 @@
+article {
+    background-color: rgb(30, 30, 30);
+}
+
+.responsive,
+.bouttonplus {
+    background-color: rgb(50, 50, 50);
+}
+
+.bouttonplus:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+body,
+main>section,
+footer {
+    background-color: rgb(40, 40, 40);
+}
+
+.responsive,
+.bouttonplus {
+    color: lightgray;
+    border-color: lightgray;
+}
+
+section>header>p,
+section>header>h2,
+.contact,
+.apropos {
+    color: #7c868f;
+}
