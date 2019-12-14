@@ -32,3 +32,7 @@ v1.4b
 v1.4.1b
 - Amélioration du mode nuit et jour
 - Mise en place des "order" afin de pouvoir manipuler la place des cartes en JS pour la géolocalisation
+
+v1.5
+- Suppression du mode sombre ajouté dans la v1.4b pour cause de conflis avec le switch implémenté
+- Ajout d'un switch permettant de passer à un mode sombre ou clair peut importe l'appareil

@@ -6,8 +6,15 @@ article {
     background-color: rgb(245, 245, 245);
 }
 
+section>header>p,
+section>header>h2 {
+    color: #6c757d;
+}
+
+.responsive,
 .bouttonplus {
     background-color: white;
+    color: black;
 }
 
 .bouttonplus:hover {
@@ -20,4 +27,5 @@ main>section {
 
 .bouttonplus {
     color: grey;
+    border: 2px solid #e7e7e7;
 }

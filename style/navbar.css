@@ -2,26 +2,22 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.89);
     position: fixed;
-    overflow: auto;
     top: 0;
 }
 
 .navbar a {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     display: flex;
     float: left;
-    text-align: center;
-    padding: 0.7em;
+    padding: 0.6em;
     color: white;
     text-decoration: none;
     padding-left: 15%;
 }
 
 body>header>a>img {
-    width: 13%;
     height: 13%;
-    margin-top: auto;
-    margin-bottom: auto;
+    max-height: 2em;
 }
 
 h1 {
@@ -29,4 +25,61 @@ h1 {
     margin-left: 0.5em;
     font-size: 1.5em;
     font-weight: 450;
+}
+
+
+/* Switch (boite autour) */
+
+.switch {
+    float: right;
+    margin: 0.9em;
+    margin-right: 15%;
+    position: relative;
+    width: 50px;
+    height: 25px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    display: none;
+}
+
+
+/* La boite autour */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .5s;
+}
+
+
+/* Le bitogno qui glisse */
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+input:checked+.slider {
+    background-color: rgb(15, 123, 231);
+}
+
+input:checked+.slider:before {
+    transform: translateX(25px);
 }

@@ -6,22 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>PPP Ingénieur</title>
-  <link rel="stylesheet" href="./style/light.css" id="pagestyle">
   <link rel="stylesheet" href="./style/main_article.css">
   <link rel="stylesheet" href="./style/main_header.css">
   <link rel="stylesheet" href="./style/navbar.css">
   <link rel="stylesheet" href="./style/footer.css">
   <link rel="stylesheet" href="./style/index.css">
-  <script src="./script/cssmode.js"></script>
-
+  <link rel="stylesheet" href="./style/dark.css" id="pagestyle">
 </head>
+
 <body>
   <header class="navbar">
-    <a href="#" class="active">
+    <a href="#" class="">
       <img src="./logob.png" alt="icone">
       <h1>Le nom</h1>
-    </a>
-    <input type="checkbox" name="Dark Mode" id="toggle" onclick="ChangeCSS()">
+
+    </a><label class="switch">
+          <input type="checkbox" name="Dark Mode" id="toggle" checked onclick="ChangeCSS()">
+          <div class="slider round"></div>
+        </label>
   </header>
   <main>
     <section>
@@ -121,6 +123,8 @@
     </section>
   </footer>
 </body>
+<!-- Script JS permettant le passage entre le mode clair et le mode sombre -->
+<script src="./script/cssmode.js"></script>
 
 </html>
 
