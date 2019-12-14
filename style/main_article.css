@@ -5,6 +5,7 @@ article {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    transition-duration: 0.5s;
 }
 
 .responsive {
@@ -13,6 +14,7 @@ article {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 1em;
     border-radius: 0.3em;
+    transition-duration: 0.5s;
 }
 
 section>img {
@@ -27,13 +29,12 @@ section>section {
 }
 
 .bouttonplus {
-    color: grey;
     padding: 0.3em 0.3em;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     margin-bottom: 0.7em;
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;
     cursor: pointer;
     border-radius: 0.5em;
     border: 2px solid #e7e7e7;
