@@ -8,6 +8,7 @@ footer {
     padding-bottom: 1.5em;
     margin: 0;
     bottom: 0;
+    transition-duration: 0.5s;
 }
 
 footer>section {
