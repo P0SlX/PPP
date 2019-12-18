@@ -1,6 +1,8 @@
+var fromJSON = localStorage.getItem("bdlatlon");
+var obj = JSON.parse(fromJSON);
+
 function SwapOrder(){
-    
-    function onPositionReceived(){
+    function onPositionReceived(position){
         PlusVersMoinsProche(position, listelatlon)
         console.log(position);
         var i = 0;
@@ -15,12 +17,12 @@ function SwapOrder(){
         parametres : deux tuples contenant deux int (les latitudes et longitudes)
         resultat : un float 
         */
-        let latitudeA = position.coords.latitude
-        let longitudeA = position.coords.longitude
-        let latitudeB = latlon.latitude
-        let longitudeB = latlon.longitude
-        let x = (longitudeB-longitudeA)*Math.cos((latitudeA+latitudeB)/2)
-        let y = latitudeB-latitudeA
+        let latA = position.coords.latitude
+        let lonA = position.coords.longitude
+        let latB = latlon.lat
+        let lonB = latlon.lon
+        let x = (lonB-lonA)*Math.cos((latA+latB)/2)
+        let y = latB-latA
         let z = Math.sqrt((Math.pow(x, 2))+(Math.pow(y, 2)))
         let distance = 1.852*60*z
         return distance
