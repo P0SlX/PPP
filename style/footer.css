@@ -4,6 +4,8 @@ footer {
     flex-wrap: wrap;
     padding-left: 20%;
     padding-right: 20%;
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
     margin: 0;
     bottom: 0;
 }
