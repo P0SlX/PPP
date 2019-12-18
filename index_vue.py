@@ -5,7 +5,7 @@
 from jinja2 import Environment, FileSystemLoader # ne pas modifier
 
 # Ajouter ici les éléments du modèles dont on a besoin
-from modele import *
+from test import *
 
 # ne modifiez pas cette fonction !
 def creer_html(fichier_template, fichier_sortie,**infos):
