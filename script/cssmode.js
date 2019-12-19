@@ -1,6 +1,6 @@
 function ChangeCSS(){
   /*
-  Cette fonction change le lien href de la page html quand elle est appelée
+  Cette fonction change le lien href de la page html quand elle est appelée.
   */
   var checkBox = document.getElementById('toggle'); //le bouton
   var link = document.getElementById('pagestyle'); //la balise link
