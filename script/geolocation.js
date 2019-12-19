@@ -145,9 +145,10 @@ function SwapOrder(){
     function PositionRecue(position){
         var listetrie = PlusVersMoinsProche(position)
         console.log(position);
-        var i = 0;
-        for (let i = 0; i < 9; i++) {
-            document.getElementsByClassName(varclasse).style.order = i;
+        var i = 1;
+        for (let ecole in listetrie) {
+            document.getElementById(ecole).style.order = i;
+            i++;
         }
     }
 
@@ -175,12 +176,13 @@ function SwapOrder(){
         resultat : une liste 
         */
         var res = []
-        for (let ecoles in BDEcoles) {
-            let latlon = BDEcoles[ecoles]
-            res.push(res[ecoles] = CalculDistance(position, latlon))
+        for (let ecole in BDEcoles) {
+            let latlon = BDEcoles[ecole]
+            res[ecole] = CalculDistance(position, latlon)
         }
-        console.log(res)
-        return res
+        resTrie = Object.keys(res).sort(function(a,b){return res[a]-res[b]})
+        console.log(resTrie)
+        return resTrie
     }
 
     function PoistionNONRecue(positionError){  
