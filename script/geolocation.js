@@ -1,4 +1,4 @@
-monJson = {
+BDEcoles = {
     "Polytech Lille": {
         "lat": 50.607736,
         "lon": 3.136850
@@ -132,17 +132,18 @@ monJson = {
         "lon": 4.853846
     }
 }
+
 /*
-for (let school in monJson) {
-    let latlon = monJson[school];
-    console.log(school);
+for (let ecoles in BDEcoles) {
+    let latlon = BDEcoles[ecoles];
+    console.log(ecoles);
     console.log(latlon);
 }
 */
 
 function SwapOrder(){
     function PositionRecue(position){
-        PlusVersMoinsProche(position)
+        var listetrie = PlusVersMoinsProche(position)
         console.log(position);
         var i = 0;
         for (let i = 0; i < 9; i++) {
@@ -152,7 +153,7 @@ function SwapOrder(){
 
     function CalculDistance(position, latlon){ 
         /*
-        fonction qui calcul la distance qui sépare deux position.
+        fonction qui calcul la distance qui sépare deux position (Pythagore)
         parametres : deux tuples contenant deux int (les latitudes et longitudes)
         resultat : un float
         */
@@ -173,12 +174,12 @@ function SwapOrder(){
         parametres :
         resultat : une liste 
         */
-        let n = 0;
         var res = []
-        for (let school in monJson) {
-            let latlon = monJson[school]
-            res.push(CalculDistance(position, latlon))
+        for (let ecoles in BDEcoles) {
+            let latlon = BDEcoles[ecoles]
+            res.push(res[ecoles] = CalculDistance(position, latlon))
         }
+        console.log(res)
         return res
     }
 
