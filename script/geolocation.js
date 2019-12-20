@@ -3,7 +3,7 @@ var BDEcoles = {
         "lat": 50.607736,
         "lon": 3.136850
     },
-    "Polytech Sorbonne":{
+    "Polytech Sorbonne": {
         "lat": 48.845205,
         "lon": 2.357183
     },
@@ -133,43 +133,43 @@ var BDEcoles = {
     },
     "Université Claude Bernard": {
         "lat": 45.756190,
-        "lon": 4.853846  
+        "lon": 4.853846
     }
 };
 
-function SwapOrder(){ 
+function SwapOrder() {
     /**
     Modifie la disposition des cards de l'index en fonction de la geolocalisation de l'utilisateur.
     Cette fonction ne prends aucun parametre car la geolocalisation ainsi que la liste des posistions des écoles sont récupérées en interne de cette fonction.
     */
-    function PositionNONRecue(positionError){  
+    function PositionNONRecue(positionError) {
         /**
         Cette fonction est appelée si la position de l'utilisateur n'a pas pu être récupéré (soit l'utilisateur à refuser l'autorisation de la geolocalisation
         soit le navigateur ne prends pas en charge cette fonctionnalitée).
         paramètre : un message d'erreur ex : GeolocationPositionError {code: 1, message: "User denied Geolocation"}
         */
-       if (positionError.message = "User denied Geolocation"){
+        if (positionError.message = "User denied Geolocation") {
             alert('Veuillez autoriser la géolocalisation afin de trier les écoles.');
-       }
-       else {
+        }
+        else {
             alert('Erreur, nous n\'avons pas pu récuper votre position. \nVotre navigateur ne supporte peut-être pas cette fonctionnalité.');
-       }   
+        }
     }
 
-    function PositionRecue(position){
+    function PositionRecue(position) {
         /**
         L'utilité de cette fpnction est d'ordonner les cards du html en fonction d'une liste.
         paramètre : un objet contenant toutes les informations sur la localisation de l'utilisateur (latitude, longitude, altitude...).
         */
         var listetrie = PlusVersMoinsProche(position); //appel de la fonction qui trie les écoles puis définition d'une variable contenant le résultat de la fonction.
         var i = 1;
-        for (let ecole in listetrie) {1
+        for (let ecole in listetrie) {
             document.getElementById(ecole).style.order = i; //On selectionne l'école en question et on lui attribu un ordre (au début de la boucle ce sont les écoles les plus proches et plus on tourne, plus l'école se situe loin).
             i++;
         }
     }
 
-    function CalculDistance(position, position_ecole){ 
+    function CalculDistance(position, position_ecole) {
         /**
         Fonction qui calcule la distance (à vol d'oiseau) qui sépare deux position (avec le théorème de Pythagore). Source : http://villemin.gerard.free.fr/aGeograp/Distance.htm#haver
         parametres : deux objets contenant la latitude et la longitude (float), position est la position de l'utilisateur et position_ecole est la position de l'école.
@@ -179,14 +179,14 @@ function SwapOrder(){
         let lonA = position.coords.longitude;
         let latB = position_ecole.lat;
         let lonB = position_ecole.lon;
-        let x = (lonB-lonA)*Math.cos((latA+latB)/2);
-        let y = latB-latA;
-        let z = Math.sqrt((Math.pow(x, 2))+(Math.pow(y, 2)));
-        let distance = 1.852*60*z;
+        let x = (lonB - lonA) * Math.cos((latA + latB) / 2);
+        let y = latB - latA;
+        let z = Math.sqrt((Math.pow(x, 2)) + (Math.pow(y, 2)));
+        let distance = 1.852 * 60 * z;
         return distance;
     }
 
-    function PlusVersMoinsProche(position){ 
+    function PlusVersMoinsProche(position) {
         /**
         Retourne la liste des écoles triés de la plus proche de la position donnée à la moins proche.
         paramètre : un objet contenant toutes les informations sur la localisation de l'utilisateur (latitude, longitude, altitude...).
@@ -197,18 +197,19 @@ function SwapOrder(){
             let position_ecole = BDEcoles[ecole]; //la variable position_ecole prend la valeur de la clé correspondant au nom de l'école (un objet contenant la latitude et la longitude ex : {"lat": 47.363995, "lon": 0.683255})
             listebrut[ecole] = CalculDistance(position, position_ecole); //la clé du nom de l'école prend la valeur qui est retourné pas la fonction CalculDistance c-à-d, la distance entre l'utilisateur de l'école donnée.
         }
-        resTrie = Object.keys(listebrut).sort(function(a, b){return listebrut[a] - listebrut[b]}); //on trie la liste (on renvoit seulement les clés) en utilisant .sort avec une fonction qui compare chaque valeur : (listebrut[a] - listebrut[b]) avec une différence afin de la trier du plus petit nombre vers le plus grand.
-        return resTrie; 
+        resTrie = Object.keys(listebrut).sort(function (a, b) { return listebrut[a] - listebrut[b] }); //on trie la liste (on renvoit seulement les clés) en utilisant .sort avec une fonction qui compare chaque valeur : (listebrut[a] - listebrut[b]) avec une différence afin de la trier du plus petit nombre vers le plus grand.
+        return resTrie;
     }
 
     var checkBox = document.getElementById('location-button');
-    if (checkBox.checked == true){
-        if(navigator.geolocation){ //si le navigateur prends en charge la géolocalisation
-            navigator.geolocation.getCurrentPosition(PositionRecue, PositionNONRecue); 
+    if (checkBox.checked) {
+        if (navigator.geolocation) { //si le navigateur prends en charge la géolocalisation
+            navigator.geolocation.getCurrentPosition(PositionRecue, PositionNONRecue);
         }
-    else {
-        //remettre la disposition de base
     }
+    else {
+        for (let ecole in BDEcoles) {
+            document.getElementById(ecole).style.order = 0;
+        }
     }
 };
-
