@@ -133,7 +133,7 @@ var BDEcoles = {
     },
     "Université Claude Bernard": {
         "lat": 45.756190,
-        "lon": 4.853846
+        "lon": 4.853846  
     }
 };
 
@@ -201,13 +201,14 @@ function SwapOrder(){
         return resTrie; 
     }
 
-    if(navigator.geolocation){ //si le navigateur prends en charge la géolocalisation
-        navigator.geolocation.getCurrentPosition(PositionRecue, PositionNONRecue); 
-        /**
-        Fonction qui récupère la position de l'utilisateur et appele une fonction :
-        la fonction PositionRecue, si le process se passe bien,
-        sinon la fonction PositionNONRecue est appelée.
-        */
+    var checkBox = document.getElementById('location-button');
+    if (checkBox.checked == true){
+        if(navigator.geolocation){ //si le navigateur prends en charge la géolocalisation
+            navigator.geolocation.getCurrentPosition(PositionRecue, PositionNONRecue); 
+        }
+    else {
+        //remettre la disposition de base
+    }
     }
 };
 
