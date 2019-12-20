@@ -153,8 +153,7 @@ function SwapOrder(){
        }
        else {
             alert('Erreur, nous n\'avons pas pu récuper votre position. \nVotre navigateur ne supporte peut-être pas cette fonctionnalité.');
-       }
-        
+       }   
     }
 
     function PositionRecue(position){
