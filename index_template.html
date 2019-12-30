@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PPP Ingénieur</title>
+  <link rel="stylesheet" href="./style/main_article.css">
+  <link rel="stylesheet" href="./style/main_header.css">
+  <link rel="stylesheet" href="./style/navbar.css">
+  <link rel="stylesheet" href="./style/footer.css">
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="stylesheet" href="./style/dark.css" id="pagestyle">
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="#" class="">
+      <img src="./logob.png" alt="icone">
+      <h1>Le nom</h1>
+    </a>
+    <label class="switch">
+      <input type="checkbox" name="Dark Mode" id="toggle" checked onclick="ChangeCSS()">
+      <div class="slider round"></div>
+    </label>
+  </header>
+  <main>
+    <section>
+      <header>
+        <h2>École Ingénieurs et débouchés</h2>
+        <p>Voilà la liste des meilleurs écoles d'ingénieurs de la France pour l'informatique, vous pouvez choisir entre un classement global ou afficher les écoles les plus proches de vous !</p>
+        <a href="#" class="button">Écoles d'ingénieurs</a>
+        <a href="#" class="button">Débouchés</a>
+      </header>
+    </section>
+    <article>
+      <div>
+        <label class="switch">
+        <input type="checkbox" name="Geolocation" id="location-button" onclick="SwapOrder()">
+        <div class="slider round"></div>
+      </label>
+      </div>
+      {% for (nom,descri) in nomTemplate %}
+      <section class="responsive">
+        <img src="iut.jpg" alt="">
+        <section>
+          <h2>{{nom}}</h2>
+          <p>{{descri}}</p>
+          <a href="#" class="bouttonplus">En savoir plus</a>
+        </section>
+      </section>
+      {% endfor %}
+    </article>
+  </main>
+  <footer>
+    <section class="apropos">
+      <h2>À Propos</h2>
+      <p>Cette page a été créée dans le cadre de la création d'une page web pouvant fournir les informations nécessaires à des étudiants possedant un DUT informatique de trouver la meilleur écoles d'ingénieur selon leur localisation ou le classement de celle-ci</p>
+    </section>
+    <section class="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="#">Site de l'IUT ></a></li>
+        <li><a href="#">Site de l'université ></a></li>
+      </ul>
+    </section>
+  </footer>
+</body>
+<!-- Script JS permettant le passage entre le mode clair et le mode sombre -->
+<script src="./script/cssmode.js"></script>
+<script src="./script/geolocation.js"></script>
+
+
+</html>

@@ -53,3 +53,8 @@ div>button {
     float: right;
     margin-right: 15%;
 }
+
+article>section>img {
+    object-fit: cover;
+    max-height: 16rem;
+}
