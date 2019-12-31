@@ -69,7 +69,6 @@ dico_des_écoles = {
         'image': 'https://upload.wikimedia.org/wikipedia/commons/8/87/Telecom_ParisTech.JPG',
         'adresse_site': "https://www.telecom-paris.fr/" },
 
-
     "Isima": {
         'description': 'Informatique des systèmes embarqués et Génie logiciel et Systèmes informatiques et Systèmes d’information et Aide à la décision et Modélisation mathématique et Science des données et Réseaux et sécurité informatique',
         'adresse': '1 Rue de la Chebarde Aubière 63178',
@@ -223,7 +222,6 @@ dico_des_écoles = {
         'image': "http://www.rabier-fluides-concept.fr/wp-content/uploads/2015/08/150628-11.jpg",
         'adresse_site': "https://polytech.univ-nantes.fr/" },
 
-
     'Polytech Lyon': {
         'description': 'Informatique',
         'adresse': '15 Boulevard André Latarjet Villeurbanne 69100',
@@ -278,7 +276,7 @@ dico_des_écoles = {
         'tel': '02 40 68 32 00',
         'date_limite': '27 avril 2020',
         'image': 'https://www.studizz.fr/uploadfile/school_394/394_studizz.png',
-        'adresse_site': "https://polytech.univ-amu.fr/" }
+        'adresse_site': "https://polytech.univ-amu.fr/"}
 
 }
 

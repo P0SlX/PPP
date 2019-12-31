@@ -30,13 +30,13 @@ button.tablinks {
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-size: 0.9em;
     color: #FFFFFF;
     background-color: #0F71D6;
     text-align: center;
     transition: all 0.2s;
     border-style: hidden;
-    outline : 0;
+    outline: 0;
 }
 
 button.tablinks:hover {
