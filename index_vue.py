@@ -5,7 +5,7 @@
 from jinja2 import Environment, FileSystemLoader # ne pas modifier
 
 # Ajouter ici les éléments du modèles dont on a besoin
-from Polytech import *
+from ppp_modele import *
 
 # ne modifiez pas cette fonction !
 def creer_html(fichier_template, fichier_sortie,**infos):
@@ -28,5 +28,5 @@ def creer_html(fichier_template, fichier_sortie,**infos):
 # Ajouter ici les appels à la fonction creer_html
 
 creer_html("index_template.html", "index.html",
-            nomTemplate = nomDescEcoles(dico_polytech)
+            nomTemplate = nomDescEcoles(dico_des_écoles)
             )
