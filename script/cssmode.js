@@ -2,8 +2,8 @@ function ChangeCSS() {
 	/*
 	Cette fonction change le lien href de la page html quand elle est appelée.
 	*/
-	var checkBox = document.getElementById('toggle');
-	var link = document.getElementById('pagestyle');
+	let checkBox = document.getElementById('toggle');
+	let link = document.getElementById('pagestyle');
 	if (checkBox.checked) { //si le bouton est checké
 		link.href = './style/dark.css'; //href prend la page de style './style/dark.css'
 	}
