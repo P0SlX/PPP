@@ -21,7 +21,7 @@ def creer_html(fichier_template, fichier_sortie,**infos):
     env=Environment(loader=FileSystemLoader('.'),trim_blocks=True)
     template=env.get_template(fichier_template)
     html=template.render(infos)
-    f = open(fichier_sortie, 'w')
+    f = open(fichier_sortie, 'w', encoding='utf-8')
     f.write(html)
     f.close()
 

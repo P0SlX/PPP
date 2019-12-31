@@ -165,7 +165,7 @@ function SwapOrder() {
         let i = 1;
         listetrie.forEach(function (ecole) {
             document.getElementById(ecole.nom).style.order = i;
-            document.getElementById(ecole.nom).querySelector(".distance").textContent = ecole.distance + " km";
+            document.getElementById(ecole.nom).getElementsByClassName("distance")[0].textContent = ecole.distance + " km";
             i++;
         });
     }
