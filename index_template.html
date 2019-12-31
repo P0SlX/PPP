@@ -70,12 +70,15 @@
         <div class="slider round"></div>
       </label>
       </div>
-      {% for (nom,descri) in nomTemplate %}
+      {% for (desc, adresse, tel, date_lim, image, nom) in infos %}
       <section class="responsive">
-        <img src="iut.jpg" alt="">
+        <img src="{{image}}" alt="">
         <section>
           <h2>{{nom}}</h2>
-          <p>{{descri}}</p>
+          <p>{{desc}}</p>
+          <p>{{adresse}}</p>
+          <p>Tel. {{tel}}</p>
+          <p>Date limite d'inscription: {{date_lim}}</p>
           <p class="distance"></p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
@@ -91,8 +94,8 @@
     <section class="contact">
       <h2>Contact</h2>
       <ul>
-        <li><a href="#">Site de l'IUT ></a></li>
-        <li><a href="#">Site de l'université ></a></li>
+        <li><a href="#">Site de l'IUT></a></li>
+        <li><a href="#">Site de l'université></a></li>
       </ul>
     </section>
   </footer>
