@@ -161,8 +161,8 @@ function SwapOrder() {
         L'utilité de cette fpnction est d'ordonner les cards du html en fonction d'une liste.
         paramètre : un objet contenant toutes les informations sur la localisation de l'utilisateur (latitude, longitude, altitude...).
         */
-        var listetrie = PlusVersMoinsProche(position); //appel de la fonction qui trie les écoles puis définition d'une variable contenant le résultat de la fonction.
-        var i = 1;
+        let listetrie = PlusVersMoinsProche(position); //appel de la fonction qui trie les écoles puis définition d'une variable contenant le résultat de la fonction.
+        let i = 1;
         listetrie.forEach(function (ecole) {
             document.getElementById(ecole.nom).style.order = i;
             document.getElementById(ecole.nom).querySelector(".distance").textContent = ecole.distance + " km";
@@ -194,7 +194,7 @@ function SwapOrder() {
         paramètre : un objet contenant toutes les informations sur la localisation de l'utilisateur (latitude, longitude, altitude...).
         resultat : une liste d'écoles (str)
         */
-        var ListeEcoleDistances = [];
+        let ListeEcoleDistances = [];
         for (let ecole in BDEcoles) {
             let position_ecole = BDEcoles[ecole]; //la variable position_ecole prend la valeur de la clé correspondant au nom de l'école (un objet contenant la latitude et la longitude ex : {"lat": 47.363995, "lon": 0.683255})
             ListeEcoleDistances.push({ "nom": ecole, "distance": CalculDistance(position, position_ecole) });
@@ -205,7 +205,7 @@ function SwapOrder() {
         return ListeEcoleDistances;
     }
 
-    var checkBox = document.getElementById('location-button');
+    const checkBox = document.getElementById('location-button');
     if (checkBox.checked) {
         if (navigator.geolocation) { //si le navigateur prends en charge la géolocalisation
             navigator.geolocation.getCurrentPosition(PositionRecue, PositionNONRecue);
@@ -217,29 +217,3 @@ function SwapOrder() {
         }
     }
 };
-
-/*
-        var ListeEcoleDistances = [];
-        for (let ecole in BDEcoles) {
-            let position_ecole = BDEcoles[ecole]; //la variable position_ecole prend la valeur de la clé correspondant au nom de l'école (un objet contenant la latitude et la longitude ex : {"lat": 47.363995, "lon": 0.683255})
-            ListeEcoleDistances.push([ecole, CalculDistance(position, BDEcoles[ecole])]); //la clé du nom de l'école prend la valeur qui est retourné pas la fonction CalculDistance c-à-d, la distance entre l'utilisateur de l'école donnée.
-        }
-        console.log(ListeEcoleDistances);
-        console.log(position);
-        resTrie = ListeEcoleDistances.sort(function (a, b) { return a[1] - b[1] }); //on trie la liste (on renvoit seulement les clés) en utilisant .sort avec une fonction qui compare chaque valeur : (ListeEcoleDistances[a] - ListeEcoleDistances[b]) avec une différence afin de la trier du plus petit nombre vers le plus grand.
-        console.log(resTrie);
-        return resTrie;
-    }
-
-*/
-
-/*
-for (let ecole in listetrie) {
-            console.log(ecole);
-            console.log(ecole.name);
-            console.log(ecole.distance);
-            document.getElementById(ecole.name).style.order = i; //On selectionne l'école en question et on lui attribu un ordre (au début de la boucle ce sont les écoles les plus proches et plus on tourne, plus l'école se situe loin).
-            i++;
-
-        }
-*/
