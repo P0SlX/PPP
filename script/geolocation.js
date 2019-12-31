@@ -1,4 +1,4 @@
-var BDEcoles = {
+const BDEcoles = {
     "Polytech Lille": {
         "lat": 50.607736,
         "lon": 3.136850
