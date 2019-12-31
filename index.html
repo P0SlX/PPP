@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>PPP IngÃ©nieur</title>
+  <title>PPP Ingénieur</title>
   <link rel="stylesheet" href="./style/main_article.css">
   <link rel="stylesheet" href="./style/main_header.css">
   <link rel="stylesheet" href="./style/navbar.css">
@@ -28,60 +28,89 @@
   <main>
     <section>
       <header>
-        <h2>Ã‰cole IngÃ©nieurs et dÃ©bouchÃ©s</h2>
-        <p>VoilÃ  la liste des meilleurs Ã©coles d'ingÃ©nieurs de la France pour l'informatique, vous pouvez choisir entre un classement global ou afficher les Ã©coles les plus proches de vous !</p>
-        <a href="#" class="button">Ã‰coles d'ingÃ©nieurs</a>
-        <a href="#" class="button">DÃ©bouchÃ©s</a>
+        <h2>École Ingénieurs et débouchés</h2>
+        <p>Voilà la liste des meilleurs écoles d'ingénieurs de la France pour l'informatique, vous pouvez choisir entre un classement global ou afficher les écoles les plus proches de vous !</p>
+        <a class="button" onclick="SwitchTab('EcolesIngesTab')">Écoles d'ingénieurs</a>
+        <a class="button" onclick="SwitchTab('DebouchesTab')">Débouchés</a>
       </header>
     </section>
-    <article>
+    <article id="DebouchesTab" class="tabcontent" style="display: none;">
+      <h3>Les Débouchés</h3>
+      <ul>
+        <li><a onclick="SwitchTab('EcolesIngesTab')">Les écoles d'ingénieur</a></li>
+        <li>Les licences
+          <ul>
+            <li><a href="https://diplomeo.com/licence-informatique">Licence informatique</a></li>
+            <li>Licence pro métiers de l'informatique
+              <ul>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-administration-et-securite-des-systemes-et-des-reseaux">Administration et sécurité des systèmes et des réseaux</a></li>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-applications-web">Applications web</a></li>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-conception-developpement-et-test-de-logiciels">Conception, développement et test de logiciels</a></li>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-conduite-de-projets">Conduite de projets</a></li>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-systemes-d-information-et-gestion-de-donnees">Systèmes d'information et gestion de données</a></li>
+              </ul>
+            </li>
+          </ul>
+          <li>Les écoles d'informatique
+            <ul>
+              <li><a href="https://diplomeo.com/trouver-bachelor-management_des_si">management des SI</a></li>
+              <li><a href="https://diplomeo.com/trouver-bachelor-developpement_logiciel">développement logiciel</a></li>
+              <li><a href="https://diplomeo.com/trouver-bachelor-domotique">domotique</a></li>
+              <li><a href="https://diplomeo.com/trouver-bachelor-marketing_digital">marketing digital</a></li>
+            </ul>
+          </li>
+          <li>Entrer dans la vie active</li>
+        </li>
+      </ul>
+    </article>
+    <article id="EcolesIngesTab" class="tabcontent">
       <div>
         <label class="switch">
         <input type="checkbox" name="Geolocation" id="location-button" onclick="SwapOrder()">
         <div class="slider round"></div>
       </label>
       </div>
-      <section class="responsive">
-        <img src="./img/Polytech_Lille.jpg" alt="">
+            <section class="responsive">
+        <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Lille</h2>
-          <p>Informatique microÃ©lectronique automatique et GÃ©nie informatique et statistique</p>
+          <p>Informatique microélectronique automatique et Génie informatique et statistique</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Sorbonne</h2>
-          <p>Electronique et informatique, MathÃ©matiques appliquÃ©es et informatique</p>
+          <p>Electronique et informatique, Mathématiques appliquées et informatique</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Paris-Sud</h2>
-          <p>Electronique et systÃ¨mes robotisÃ©s, Informatique et Photonique et systÃ¨mes optroniques</p>
+          <p>Electronique et systèmes robotisés, Informatique et Photonique et systèmes optroniques</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Nancy</h2>
-          <p>IngÃ©nierie de lâ€™Information et des SystÃ¨mes et Internet Industriel</p>
+          <p>Ingénierie de l’Information et des Systèmes et Internet Industriel</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Orleans</h2>
-          <p>IngÃ©nierie de lâ€™Information et des SystÃ¨mes et Internet Industriel</p>
+          <p>Ingénierie de l’Information et des Systèmes et Internet Industriel</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Tours</h2>
@@ -89,15 +118,15 @@
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Angers</h2>
-          <p>SystÃ¨mes automatisÃ©s et gÃ©nie informatique</p>
+          <p>Systèmes automatisés et génie informatique</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Nantes</h2>
@@ -105,7 +134,7 @@
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Lyon</h2>
@@ -113,39 +142,39 @@
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Clermont-Ferrand</h2>
-          <p>GÃ©nie mathÃ©matique et modÃ©lisation</p>
+          <p>Génie mathématique et modélisation</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
-          <h2>Polytech Annecy-ChambÃ©ry</h2>
-          <p>Informatique, DonnÃ©es, Instrumentation, Automatique</p>
+          <h2>Polytech Annecy-Chambéry</h2>
+          <p>Informatique, Données, Instrumentation, Automatique</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Grenoble</h2>
-          <p>Informatique et Informatique et Electronique des SystÃ¨mes EmbarquÃ©s</p>
+          <p>Informatique et Informatique et Electronique des Systèmes Embarqués</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
-        <img src="./img/Polytech_Montpellier.jpg" alt="">
+            <section class="responsive">
+        <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Montpellier</h2>
-          <p>Informatique et gestion et SystÃ¨mes embarquÃ©s</p>
+          <p>Informatique et gestion et Systèmes embarqués</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Nice Sophia</h2>
@@ -153,26 +182,26 @@
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-      <section class="responsive">
+            <section class="responsive">
         <img src="iut.jpg" alt="">
         <section>
           <h2>Polytech Marseille</h2>
-          <p>Informatique et GÃ©nie industriel et informatique</p>
+          <p>Informatique et Génie industriel et informatique</p>
           <a href="#" class="bouttonplus">En savoir plus</a>
         </section>
       </section>
-    </article>
+          </article>
   </main>
   <footer>
     <section class="apropos">
-      <h2>Ã€ Propos</h2>
-      <p>Cette page a Ã©tÃ© crÃ©Ã©e dans le cadre de la crÃ©ation d'une page web pouvant fournir les informations nÃ©cessaires Ã  des Ã©tudiants possedant un DUT informatique de trouver la meilleur Ã©coles d'ingÃ©nieur selon leur localisation ou le classement de celle-ci</p>
+      <h2>À Propos</h2>
+      <p>Cette page a été créée dans le cadre de la création d'une page web pouvant fournir les informations nécessaires à des étudiants possedant un DUT informatique de trouver la meilleur écoles d'ingénieur selon leur localisation ou le classement de celle-ci</p>
     </section>
     <section class="contact">
       <h2>Contact</h2>
       <ul>
         <li><a href="#">Site de l'IUT ></a></li>
-        <li><a href="#">Site de l'universitÃ© ></a></li>
+        <li><a href="#">Site de l'université ></a></li>
       </ul>
     </section>
   </footer>
@@ -180,6 +209,7 @@
 <!-- Script JS permettant le passage entre le mode clair et le mode sombre -->
 <script src="./script/cssmode.js"></script>
 <script src="./script/geolocation.js"></script>
+<script src="./script/tabs.js"></script>
 
 
 </html>

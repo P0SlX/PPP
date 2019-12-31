@@ -30,11 +30,40 @@
       <header>
         <h2>École Ingénieurs et débouchés</h2>
         <p>Voilà la liste des meilleurs écoles d'ingénieurs de la France pour l'informatique, vous pouvez choisir entre un classement global ou afficher les écoles les plus proches de vous !</p>
-        <a href="#" class="button">Écoles d'ingénieurs</a>
-        <a href="#" class="button">Débouchés</a>
+        <a class="button" onclick="SwitchTab('EcolesIngesTab')">Écoles d'ingénieurs</a>
+        <a class="button" onclick="SwitchTab('DebouchesTab')">Débouchés</a>
       </header>
     </section>
-    <article>
+    <article id="DebouchesTab" class="tabcontent" style="display: none;">
+      <h3>Les Débouchés</h3>
+      <ul>
+        <li><a onclick="SwitchTab('EcolesIngesTab')">Les écoles d'ingénieur</a></li>
+        <li>Les licences
+          <ul>
+            <li><a href="https://diplomeo.com/licence-informatique">Licence informatique</a></li>
+            <li>Licence pro métiers de l'informatique
+              <ul>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-administration-et-securite-des-systemes-et-des-reseaux">Administration et sécurité des systèmes et des réseaux</a></li>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-applications-web">Applications web</a></li>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-conception-developpement-et-test-de-logiciels">Conception, développement et test de logiciels</a></li>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-conduite-de-projets">Conduite de projets</a></li>
+                <li><a href="http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-systemes-d-information-et-gestion-de-donnees">Systèmes d'information et gestion de données</a></li>
+              </ul>
+            </li>
+          </ul>
+          <li>Les écoles d'informatique
+            <ul>
+              <li><a href="https://diplomeo.com/trouver-bachelor-management_des_si">management des SI</a></li>
+              <li><a href="https://diplomeo.com/trouver-bachelor-developpement_logiciel">développement logiciel</a></li>
+              <li><a href="https://diplomeo.com/trouver-bachelor-domotique">domotique</a></li>
+              <li><a href="https://diplomeo.com/trouver-bachelor-marketing_digital">marketing digital</a></li>
+            </ul>
+          </li>
+          <li>Entrer dans la vie active</li>
+        </li>
+      </ul>
+    </article>
+    <article id="EcolesIngesTab" class="tabcontent">
       <div>
         <label class="switch">
         <input type="checkbox" name="Geolocation" id="location-button" onclick="SwapOrder()">
@@ -70,6 +99,7 @@
 <!-- Script JS permettant le passage entre le mode clair et le mode sombre -->
 <script src="./script/cssmode.js"></script>
 <script src="./script/geolocation.js"></script>
+<script src="./script/tabs.js"></script>
 
 
 </html>
