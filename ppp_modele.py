@@ -235,7 +235,7 @@ dico_des_écoles = {
         'adresse': 'Campus Universitaire des Cézeaux, 2 Avenue Blaise Pascal Aubière 63100',
         'tel': '04 73 40 75 00',
         'date_limite': '27 avril 2020',
-        'image': '"https://lejournaldeleco.fr/wp-content/uploads/2019/05/Polytech-1-705x470.jpg"',
+        'image': "https://lejournaldeleco.fr/wp-content/uploads/2019/05/Polytech-1-705x470.jpg",
         'adresse_site': "http://polytech.univ-bpclermont.fr/" },
 
     'Polytech Annecy-Chambéry': {
