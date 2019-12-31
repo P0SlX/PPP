@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>PPP Ingénieur</title>
-  <link rel="stylesheet" href="./style/main_article.css">
+  <link rel="stylesheet" href="./style/ecole_article.css">
+  <link rel="stylesheet" href="./style/debouches_article.css">
   <link rel="stylesheet" href="./style/main_header.css">
   <link rel="stylesheet" href="./style/navbar.css">
   <link rel="stylesheet" href="./style/footer.css">
@@ -30,14 +31,14 @@
       <header>
         <h2>Après un DUT, une école d'ingé ?!</h2>
         <p>Voilà la liste des meilleurs écoles d'ingénieurs de la France pour l'informatique, vous pouvez choisir entre un classement global ou afficher les écoles les plus proches de vous !</p>
-        <a href="#" class="button" onclick="SwitchTab('EcolesIngesTab')">Écoles d'ingénieurs</a>
-        <a href="#" class="button" onclick="SwitchTab('DebouchesTab')">Débouchés</a>
+        <button class="tablinks" onclick="SwitchTab(event, 'EcolesIngesTab')" id="DefaultTab">Écoles d'ingénieurs</button>
+        <button class="tablinks" onclick="SwitchTab(event, 'DebouchesTab')">Débouchés</button>
       </header>
     </section>
-    <article id="DebouchesTab" class="tabcontent" style="display: none;">
+    <article id="DebouchesTab" class="tabcontent">
       <h3>Les Débouchés</h3>
       <ul>
-        <li><a onclick="SwitchTab('EcolesIngesTab')">Les écoles d'ingénieur</a></li>
+        <li><a onclick="SwitchTab(event, 'EcolesIngesTab')">Les écoles d'ingénieur</a></li>
         <li>Les licences
           <ul>
             <li><a href="https://diplomeo.com/licence-informatique">Licence informatique</a></li>

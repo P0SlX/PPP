@@ -22,7 +22,7 @@ header>p {
     font-weight: 300;
 }
 
-a.button {
+button.tablinks {
     display: inline-block;
     padding: 0.3em 1.2em;
     margin: 0 0.3em 0.3em 0;
@@ -35,10 +35,16 @@ a.button {
     background-color: #0F71D6;
     text-align: center;
     transition: all 0.2s;
+    border-style: hidden;
+    outline : 0;
 }
 
-a.button:hover {
-    background-color: #0F71F3;
+button.tablinks:hover {
+    background-color: rgb(55, 155, 255);
+}
+
+button.active {
+    background-color: rgb(96, 176, 255);
 }
 
 .tabcontent {
