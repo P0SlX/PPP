@@ -40,3 +40,12 @@ a.button {
 a.button:hover {
     background-color: #0F71F3;
 }
+
+.tabcontent {
+    animation: transi_fondu 0.5s;
+}
+
+@keyframes transi_fondu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
