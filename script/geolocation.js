@@ -214,6 +214,8 @@ function SwapOrder() {
     else {
         for (let ecole in BDEcoles) {
             document.getElementById(ecole).style.order = 0;
+            document.getElementById(ecole).getElementsByClassName("distance")[0].textContent = "";
+            i++;
         }
     }
 };
