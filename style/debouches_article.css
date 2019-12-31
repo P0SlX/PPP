@@ -1,6 +1,60 @@
-article>h3{
+article {
+    color: #6c757d;
+    height: 25em;
+}
+
+article>h3 {
     flex-basis: 100%;
     flex-grow: 1;
     margin: auto;
+    text-align: center;
+}
 
+article a {
+    color: #0F71D6;
+    text-decoration: none;
+}
+
+article a:hover {
+    color: rgb(107, 168, 255);
+}
+
+/* Style du menu déroulant */
+
+article ul {
+    list-style-type: none;
+}
+
+.menu_deroulant {
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu_deroulant::before {
+    content: "\25B6";
+    color: #6c757d;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.menu_deroulant_bas::before {
+    transform: rotate(90deg);
+}
+
+.imbrication {
+    display: none;
+}
+
+.imbrication_active {
+    display: block;
+    animation: transi_fondu 1s;
+}
+
+@keyframes transi_fondu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
