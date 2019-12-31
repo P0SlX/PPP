@@ -3,6 +3,7 @@
     background: rgba(0, 0, 0, 0.89);
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 .navbar a {
