@@ -282,6 +282,10 @@ dico_des_écoles = {
 
 
 def info(dico):
+    """
+    Cette fonction prend en parametre une base de données (ensemble de dictionnaires)
+    et filtre les données afin de les retourner sous forme de liste pour faciliter son intégration dans Jinja
+    """
     tempRes = []
     res = []
     for (nom, ensemble) in dico.items():
@@ -291,3 +295,21 @@ def info(dico):
         res.append(tempRes)
         tempRes = []
     return res
+
+
+assert info({"Ensimag": {
+        'description': "Grande école publique d'ingénieurs en informatique et mathématiques appliquées de Grenoble",
+        'adresse': '681 Rue de la Passerelle Saint-Martin-d\'Hères 38400',
+        'tel': '04 76 82 72 33',
+        "date_limite": '10 Octobre 2020',
+        'image': "http://ensimag.grenoble-inp.fr/medias/photo/minatec_1485525408991-jpg?ID_FICHE=192861",
+        'adresse_site': "http://ensimag.grenoble-inp.fr/" 
+        }}
+) == [[
+    "Grande école publique d'ingénieurs en informatique et mathématiques appliquées de Grenoble", 
+    "681 Rue de la Passerelle Saint-Martin-d'Hères 38400", 
+    '04 76 82 72 33', 
+    '10 Octobre 2020', 
+    'http://ensimag.grenoble-inp.fr/medias/photo/minatec_1485525408991-jpg?ID_FICHE=192861', 
+    'http://ensimag.grenoble-inp.fr/', 
+    'Ensimag']]

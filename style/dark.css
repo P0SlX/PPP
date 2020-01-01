@@ -28,3 +28,11 @@ section>header>h2,
 .apropos {
     color: #7c868f;
 }
+
+article>section>section>p {
+    color: rgb(150, 150, 150);
+}
+
+article>section>section>h3 {
+    color: rgb(201, 201, 201);
+}

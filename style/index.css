@@ -13,8 +13,16 @@ p {
     font-weight: 300;
 }
 
+article>section>section>p {
+    font-size: 1em;
+    font-weight: 250;
+    color: rgb(150, 150, 150);
+}
+
 h2 {
-    font-weight: 400;
+    font-weight: 350;
+    font-size: 1.8em;
+    color: rgb(55, 155, 255);
 }
 
 @media only screen and (max-width: 1200px) {

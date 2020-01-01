@@ -30,3 +30,11 @@ main>section {
     color: grey;
     border: 2px solid #e7e7e7;
 }
+
+article>section>section>p {
+    color: rgb(80, 80, 80);
+}
+
+article>section>section>h3 {
+    color: rgb(29, 29, 29);
+}

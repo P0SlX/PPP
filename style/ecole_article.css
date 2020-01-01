@@ -31,6 +31,12 @@ section>section {
     padding-right: 3%;
 }
 
+article>section>section>h3 {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: rgb(29, 29, 29);
+}
+
 .bouttonplus {
     padding: 0.3em 0.3em;
     text-align: center;

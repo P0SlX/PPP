@@ -40,15 +40,15 @@ button.tablinks {
 }
 
 button.tablinks:hover {
-    background-color: rgb(55, 155, 255);
+    background-color: rgb(45, 145, 255);
 }
 
 button.active {
-    background-color: rgb(96, 176, 255);
+    background-color: rgb(50, 150, 255);
 }
 
 .tabcontent {
-    animation: transi_fondu 1s;
+    animation: transi_fondu 0.3s;
 }
 
 @keyframes transi_fondu {

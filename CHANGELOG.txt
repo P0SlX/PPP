@@ -5,7 +5,7 @@ v1.0
 
 v1.1
 - Ajout du CSS de la navbar avec flex et buggy ajout de détection de définition d'écran
-- Ajout des logo fait maison en noir et en blanc (pour une future implémentation du mode sombre)
+- Ajout des logos fait maison en noir et en blanc (pour une future implémentation du mode sombre)
 
 v1.2
 - Ajout du CSS pour le main de la page (avec un flex un peu moins buggy)
@@ -36,3 +36,13 @@ v1.4.1b
 v1.5
 - Suppression du mode sombre ajouté dans la v1.4b pour cause de conflis avec le switch implémenté
 - Ajout d'un switch permettant de passer à un mode sombre ou clair peut importe l'appareil
+
+v2.0
+Il y a tellement de changement que je vais certainement en oublier mais les plus importants sont:
+- Génération automatique de la page d'accueil via Jinja2
+- Mise en place d'une base de données contenant toutes les informations des écoles
+- Correction de bugs de la géolocalisation (pas encore fonctionnel) 
+- Ajout de plus de couleurs et de styles dans les boites
+- Ajout des débouchés
+- Ajout du logo dans l'onglet
+- Et bien d'autres...
