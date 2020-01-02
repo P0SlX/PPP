@@ -167,13 +167,20 @@ function SwapOrder() {
         L'utilité de cette fpnction est d'ordonner les cards du html en fonction d'une liste.
         paramètre : un objet contenant toutes les informations sur la localisation de l'utilisateur (latitude, longitude, altitude...).
         */
+        document.getElementById('EcolesIngesTab').style.opacity = 0;
         let listetrie = PlusVersMoinsProche(position); //appel de la fonction qui trie les écoles puis définition d'une variable contenant le résultat de la fonction.
         let i = 1;
+        setTimeout(function(){
         listetrie.forEach(function (ecole) {
             document.getElementById(ecole.nom).style.order = i;
             document.getElementById(ecole.nom).getElementsByClassName("distance")[0].textContent = ecole.distance + " km";
             i++;
         });
+        }, 500);
+        setTimeout(function(){
+            document.getElementById('EcolesIngesTab').style.opacity = 1;
+        }, 1000);
+        
     }
 
     function CalculDistance(position, position_ecole) {
@@ -218,10 +225,16 @@ function SwapOrder() {
         }
     }
     else {
+        document.getElementById('EcolesIngesTab').style.opacity = 0;
+        setTimeout(function(){
         for (let ecole in BDEcoles) {
             document.getElementById(ecole).style.order = 0;
             document.getElementById(ecole).getElementsByClassName("distance")[0].textContent = "";
             i++;
         }
+        }, 500);
+        setTimeout(function(){
+            document.getElementById('EcolesIngesTab').style.opacity = 1;
+        }, 1000);
     }
 };
