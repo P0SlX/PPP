@@ -151,12 +151,10 @@ function SwapOrder() {
         checkBox.checked = false;
         if (positionError.code = 1) {
             alert('Veuillez autoriser la géolocalisation afin de trier les écoles.');
-        }
-        else {
+        } else {
             if (positionError.code = 2) {
                 alert('Erreur, nous n\'avons pas pu récuper votre position. \nVotre navigateur ne supporte peut-être pas cette fonctionnalité.');
-            }
-            else {
+            } else {
                 alert('La demande de géolocalisation à expiré. Veuillez réessayer.')
             }
         }
@@ -212,7 +210,7 @@ function SwapOrder() {
             let position_ecole = BDEcoles[ecole]; //la variable position_ecole prend la valeur de la clé correspondant au nom de l'école (un objet contenant la latitude et la longitude ex : {"lat": 47.363995, "lon": 0.683255})
             ListeEcoleDistances.push({ "nom": ecole, "distance": CalculDistance(position, position_ecole) });
         }
-        ListeEcoleDistances.sort(function (a, b) {
+        ListeEcoleDistances.sort(function(a, b) {
             return a.distance - b.distance;
         });
         return ListeEcoleDistances;
