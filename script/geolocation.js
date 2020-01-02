@@ -150,8 +150,7 @@ function SwapOrder() {
         */
         if (positionError.message = "User denied Geolocation") {
             alert('Veuillez autoriser la géolocalisation afin de trier les écoles.');
-        }
-        else {
+        } else {
             alert('Erreur, nous n\'avons pas pu récuper votre position. \nVotre navigateur ne supporte peut-être pas cette fonctionnalité.');
         }
     }
@@ -163,7 +162,7 @@ function SwapOrder() {
         */
         let listetrie = PlusVersMoinsProche(position); //appel de la fonction qui trie les écoles puis définition d'une variable contenant le résultat de la fonction.
         let i = 1;
-        listetrie.forEach(function (ecole) {
+        listetrie.forEach(function(ecole) {
             document.getElementById(ecole.nom).style.order = i;
             document.getElementById(ecole.nom).getElementsByClassName("distance")[0].textContent = ecole.distance + " km";
             i++;
@@ -199,7 +198,7 @@ function SwapOrder() {
             let position_ecole = BDEcoles[ecole]; //la variable position_ecole prend la valeur de la clé correspondant au nom de l'école (un objet contenant la latitude et la longitude ex : {"lat": 47.363995, "lon": 0.683255})
             ListeEcoleDistances.push({ "nom": ecole, "distance": CalculDistance(position, position_ecole) });
         }
-        ListeEcoleDistances.sort(function (a, b) {
+        ListeEcoleDistances.sort(function(a, b) {
             return a.distance - b.distance;
         });
         return ListeEcoleDistances;
@@ -210,8 +209,7 @@ function SwapOrder() {
         if (navigator.geolocation) { //si le navigateur prends en charge la géolocalisation
             navigator.geolocation.getCurrentPosition(PositionRecue, PositionNONRecue);
         }
-    }
-    else {
+    } else {
         for (let ecole in BDEcoles) {
             document.getElementById(ecole).style.order = 0;
             document.getElementById(ecole).getElementsByClassName("distance")[0].textContent = "";
