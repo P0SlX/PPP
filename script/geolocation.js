@@ -148,7 +148,6 @@ function SwapOrder() {
         soit le navigateur ne prends pas en charge cette fonctionnalitée).
         paramètre : un message d'erreur ex : GeolocationPositionError {code: 1, message: "User denied Geolocation"}
         */
-       console.log(positionError)
         checkBox.checked = false;
         if (positionError.code = 1) {
             alert('Veuillez autoriser la géolocalisation afin de trier les écoles.');
