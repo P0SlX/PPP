@@ -27,4 +27,7 @@ def creer_html(fichier_template, fichier_sortie,**infos):
 
 # Ajouter ici les appels à la fonction creer_html
 
-creer_html("index_template.html", "index.html", infos = info(dico_des_écoles))
+creer_html("index_template.html", "index.html", 
+            infos_ecole_inge = info(dico_des_écoles),
+            infos_licence_pro = info(dico_des_licences_pro),
+            infos_ecoles_info = info(dico_des_ecoles_info))

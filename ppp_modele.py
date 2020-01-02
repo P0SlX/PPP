@@ -280,6 +280,39 @@ dico_des_écoles = {
 
 }
 
+dico_des_licences_pro = {
+    'Administration et sécurité des systèmes et des réseaux': {
+        'ressource': 'http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-administration-et-securite-des-systemes-et-des-reseaux' },
+
+    'Applications web': {
+        'ressource': 'http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-applications-web' },
+    
+    'Conception, développement et test de logiciels': {
+        'ressource': 'http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-conception-developpement-et-test-de-logiciels' },
+
+    'Conduite de projets': {
+        'ressource': 'http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-conduite-de-projets' },
+    
+    'Systèmes d\'information et gestion de données': {
+        'ressource': 'http://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/Licence-pro-metiers-de-l-informatique-systemes-d-information-et-gestion-de-donnees'}
+
+}
+
+dico_des_ecoles_info = {
+    'management des SI': {
+        'ressource': 'https://diplomeo.com/trouver-bachelor-management_des_si' },
+
+    'développement logiciel': {
+        'ressource': 'https://diplomeo.com/trouver-bachelor-developpement_logiciel' },
+
+    'domotique': {
+        'ressource': 'https://diplomeo.com/trouver-bachelor-domotique' },
+    
+    'marketing digital': {
+        'ressource': 'https://diplomeo.com/trouver-bachelor-marketing_digital'}
+
+}
+
 
 def info(dico):
     """
