@@ -2,7 +2,7 @@ article {
     color: #6c757d;
 }
 
-article>h3 {
+article>h2 {
     flex-basis: 100%;
     flex-grow: 1;
     margin: auto;

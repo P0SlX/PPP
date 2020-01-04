@@ -1,61 +1,61 @@
 const BDEcoles = {
-    "Polytech Lille": {
+    "Polytech_Lille": {
         "lat": 50.607736,
         "lon": 3.136850
     },
-    "Polytech Sorbonne": {
+    "Polytech_Sorbonne": {
         "lat": 48.845216,
         "lon": 2.357145
     },
-    "Polytech Paris-Sud": {
+    "Polytech_Paris-Sud": {
         "lat": 48.709228,
         "lon": 2.171136
     },
-    "Polytech Nancy": {
+    "Polytech_Nancy": {
         "lat": 48.660120,
         "lon": 6.188261
     },
-    "Polytech Orleans": {
+    "Polytech_Orleans": {
         "lat": 47.844203,
         "lon": 1.939034
     },
-    "Polytech Tours": {
+    "Polytech_Tours": {
         "lat": 47.363995,
         "lon": 0.683255
     },
-    "Polytech Angers": {
+    "Polytech_Angers": {
         "lat": 47.480626,
         "lon": -0.592132
     },
-    "Polytech Nantes": {
+    "Polytech_Nantes": {
         "lat": 47.281892,
         "lon": -1.515896
     },
-    "Polytech Lyon": {
+    "Polytech_Lyon": {
         "lat": 45.779316,
         "lon": 4.868214
     },
-    "Polytech Clermont-Ferrand": {
+    "Polytech_Clermont-Ferrand": {
         "lat": 45.760938,
         "lon": 3.109215
     },
-    "Polytech Annecy-Chambéry": {
+    "Polytech_Annecy-Chambéry": {
         "lat": 45.919742,
         "lon": 6.157915
     },
-    "Polytech Grenoble": {
+    "Polytech_Grenoble": {
         "lat": 45.184493,
         "lon": 5.752969
     },
-    "Polytech Montpellier": {
+    "Polytech_Montpellier": {
         "lat": 43.632789,
         "lon": 3.862606
     },
-    "Polytech Nice Sophia": {
+    "Polytech_Nice_Sophia": {
         "lat": 43.615614,
         "lon": 7.071725
     },
-    "Polytech Marseille": {
+    "Polytech_Marseille": {
         "lat": 43.231976,
         "lon": 5.443125
     },
@@ -63,15 +63,15 @@ const BDEcoles = {
         "lat": 45.184638,
         "lon": 5.752744
     },
-    "Ecole 42": {
+    "Ecole_42": {
         "lat": 48.896676,
         "lon": 2.318507
     },
-    "Ecole normale supérieure": {
+    "Ecole_normale_supérieure": {
         "lat": 48.842233,
         "lon": 2.345181
     },
-    "Insa Toulouse": {
+    "Insa_Toulouse": {
         "lat": 43.569683,
         "lon": 1.467740
     },
@@ -79,11 +79,11 @@ const BDEcoles = {
         "lat": 43.602101,
         "lon": 1.454398
     },
-    "Centrale Supélec": {
+    "Centrale_Supélec": {
         "lat": 48.708809,
         "lon": 2.163995
     },
-    "Université Pierre et Marie Curie": {
+    "Université_Pierre_et_Marie_Curie": {
         "lat": 48.847019,
         "lon": 2.357370
     },
@@ -95,11 +95,11 @@ const BDEcoles = {
         "lat": 45.759327,
         "lon": 3.111220
     },
-    "Université Paul Sabatier": {
+    "Université_Paul_Sabatier": {
         "lat": 43.561984,
         "lon": 1.470043
     },
-    "Télécom Nancy": {
+    "Télécom_Nancy": {
         "lat": 48.669147,
         "lon": 6.155318
     },
@@ -107,11 +107,11 @@ const BDEcoles = {
         "lat": 48.797981,
         "lon": 2.357191
     },
-    "Isae - Supaéro": {
+    "Isae_-_Supaéro": {
         "lat": 43.565904,
         "lon": 1.474605
     },
-    "Insa Lyon": {
+    "Insa_Lyon": {
         "lat": 45.783369,
         "lon": 4.878059
     },
@@ -119,7 +119,7 @@ const BDEcoles = {
         "lat": 48.626811,
         "lon": 2.431944
     },
-    "Université Paris Sud": {
+    "Université_Paris_Sud": {
         "lat": 48.702859,
         "lon": 2.174252
     },
@@ -131,7 +131,7 @@ const BDEcoles = {
         "lat": 44.806569,
         "lon": -0.605596
     },
-    "Université Claude Bernard": {
+    "Université_Claude_Bernard": {
         "lat": 45.756190,
         "lon": 4.853846
     }
@@ -168,17 +168,17 @@ function SwapOrder() {
         document.getElementById('EcolesIngesTab').style.opacity = 0;
         let listetrie = PlusVersMoinsProche(position); //appel de la fonction qui trie les écoles puis définition d'une variable contenant le résultat de la fonction.
         let i = 1;
-        setTimeout(function(){
-        listetrie.forEach(function (ecole) {
-            document.getElementById(ecole.nom).style.order = i;
-            document.getElementById(ecole.nom).getElementsByClassName("distance")[0].textContent = ecole.distance + " km";
-            i++;
-        });
+        setTimeout(function () {
+            listetrie.forEach(function (ecole) {
+                document.getElementById(ecole.nom).style.order = i;
+                document.getElementById(ecole.nom).getElementsByClassName("distance")[0].textContent = ecole.distance + " km";
+                i++;
+            });
         }, 500);
-        setTimeout(function(){
+        setTimeout(function () {
             document.getElementById('EcolesIngesTab').style.opacity = 1;
         }, 1000);
-        
+
     }
 
     function CalculDistance(position, position_ecole) {
@@ -210,7 +210,7 @@ function SwapOrder() {
             let position_ecole = BDEcoles[ecole]; //la variable position_ecole prend la valeur de la clé correspondant au nom de l'école (un objet contenant la latitude et la longitude ex : {"lat": 47.363995, "lon": 0.683255})
             ListeEcoleDistances.push({ "nom": ecole, "distance": CalculDistance(position, position_ecole) });
         }
-        ListeEcoleDistances.sort(function(a, b) {
+        ListeEcoleDistances.sort(function (a, b) {
             return a.distance - b.distance;
         });
         return ListeEcoleDistances;
@@ -224,14 +224,14 @@ function SwapOrder() {
     }
     else {
         document.getElementById('EcolesIngesTab').style.opacity = 0;
-        setTimeout(function(){
-        for (let ecole in BDEcoles) {
-            document.getElementById(ecole).style.order = 0;
-            document.getElementById(ecole).getElementsByClassName("distance")[0].textContent = "";
-            i++;
-        }
+        setTimeout(function () {
+            for (let ecole in BDEcoles) {
+                document.getElementById(ecole).style.order = 0;
+                document.getElementById(ecole).getElementsByClassName("distance")[0].textContent = "";
+                i++;
+            }
         }, 500);
-        setTimeout(function(){
+        setTimeout(function () {
             document.getElementById('EcolesIngesTab').style.opacity = 1;
         }, 1000);
     }

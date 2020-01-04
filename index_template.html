@@ -37,7 +37,7 @@
       </header>
     </section>
     <article id="DebouchesTab" class="tabcontent">
-      <h3>Les Débouchés</h3>
+      <h2>Les Débouchés</h2>
       <ul>
         <li><a onclick="SwitchTab(event, 'EcolesIngesTab')">Les écoles d'ingénieur</a></li>
         <li><span class="menu_deroulant">Les licences</span>
@@ -52,14 +52,13 @@
             </li>
           </ul>
           <li><span class="menu_deroulant">Les écoles d'informatique</span>
-            <ul class="imbrication">
-              {% for (site, nom) in infos_ecoles_info %}
-              <li><a href="{{site}}">{{nom}}</a></li>
-              {% endfor %}
-            </ul>
-          </li>
-          <li>Entrer dans la vie active</li>
+          <ul class="imbrication">
+            {% for (site, nom) in infos_ecoles_info %}
+            <li><a href="{{site}}">{{nom}}</a></li>
+            {% endfor %}
+          </ul>
         </li>
+        <li>Entrer dans la vie active</li>
       </ul>
     </article>
     <article id="EcolesIngesTab" class="tabcontent">
@@ -69,8 +68,8 @@
         <div class="slider round"></div>
       </label>
       </div>
-      {% for (desc, adresse, tel, date_lim, image, adresse_site, nom) in infos_ecole_inge %}
-      <section class="responsive" id="{{nom}}">
+      {% for (desc, adresse, tel, date_lim, image, adresse_site, nomhtml, nom) in infos_ecole_inge %}
+      <section class="responsive" id="{{nomhtml}}">
         <img src="{{image}}" alt="{{nom}}">
         <section>
           <h2>{{nom}}</h2>
@@ -98,11 +97,10 @@
       </ul>
     </section>
   </footer>
+  <script src="./script/cssmode.js"></script>
+  <script src="./script/geolocation.js"></script>
+  <script src="./script/tabs.js"></script>
+  <script src="script/menuderoulant.js"></script>
 </body>
-<!-- Script JS permettant le passage entre le mode clair et le mode sombre -->
-<script src="./script/cssmode.js"></script>
-<script src="./script/geolocation.js"></script>
-<script src="./script/tabs.js"></script>
-<script src="script/menuderoulant.js"></script>
 
 </html>
