@@ -17,7 +17,7 @@
 }
 
 body>header>a>img {
-    max-height: 1.8em;
+    max-height: 1.7em;
 }
 
 h1 {
@@ -32,7 +32,7 @@ h1 {
 
 .switch {
     float: right;
-    margin: 0.8em;
+    margin: 0.7em;
     margin-right: 15%;
     position: relative;
     width: 50px;

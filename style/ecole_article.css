@@ -34,7 +34,6 @@ section>section {
 article>section>section>h3 {
     font-size: 1.2em;
     font-weight: 300;
-    color: rgb(29, 29, 29);
 }
 
 .bouttonplus {
@@ -48,10 +47,6 @@ article>section>section>h3 {
     border-radius: 0.5em;
     border: 2px solid #e7e7e7;
     float: right;
-}
-
-p {
-    word-wrap: break-word;
 }
 
 div {

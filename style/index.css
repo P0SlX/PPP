@@ -10,13 +10,11 @@ body {
 
 p {
     word-wrap: break-word;
-    font-weight: 300;
 }
 
 article>section>section>p {
     font-size: 1em;
     font-weight: 250;
-    color: rgb(150, 150, 150);
 }
 
 h2 {
