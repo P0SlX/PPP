@@ -52,16 +52,17 @@
             </li>
           </ul>
           <li><span class="menu_deroulant">Les écoles d'informatique</span>
-          <ul class="imbrication">
-            {% for (site, nom) in infos_ecoles_info %}
-            <li><a href="{{site}}">{{nom}}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
-        <li>Entrer dans la vie active</li>
+            <ul class="imbrication">
+              {% for (site, nom) in infos_ecoles_info %}
+              <li><a href="{{site}}">{{nom}}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li>Entrer dans la vie active</li>
       </ul>
     </article>
     <article id="EcolesIngesTab" class="tabcontent">
+      <button class="ScrollBack" onclick="topFunction()" id="ScrollBack" title="Aller en haut de la page">↑</button>
       <div>
         <label class="switch">
         <input type="checkbox" name="Geolocation" id="location-button" onclick="SwapOrder()">
@@ -101,6 +102,7 @@
   <script src="./script/geolocation.js"></script>
   <script src="./script/tabs.js"></script>
   <script src="script/menuderoulant.js"></script>
+  <script src="script/scrollback.js"></script>
 </body>
 
 </html>

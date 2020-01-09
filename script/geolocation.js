@@ -168,14 +168,14 @@ function SwapOrder() {
         document.getElementById('EcolesIngesTab').style.opacity = 0;
         let listetrie = PlusVersMoinsProche(position); //appel de la fonction qui trie les écoles puis définition d'une variable contenant le résultat de la fonction.
         let i = 1;
-        setTimeout(function () {
-            listetrie.forEach(function (ecole) {
+        setTimeout(function() {
+            listetrie.forEach(function(ecole) {
                 document.getElementById(ecole.nom).style.order = i;
                 document.getElementById(ecole.nom).getElementsByClassName("distance")[0].textContent = ecole.distance + " km";
                 i++;
             });
         }, 500);
-        setTimeout(function () {
+        setTimeout(function() {
             document.getElementById('EcolesIngesTab').style.opacity = 1;
         }, 1000);
 
@@ -210,7 +210,7 @@ function SwapOrder() {
             let position_ecole = BDEcoles[ecole]; //la variable position_ecole prend la valeur de la clé correspondant au nom de l'école (un objet contenant la latitude et la longitude ex : {"lat": 47.363995, "lon": 0.683255})
             ListeEcoleDistances.push({ "nom": ecole, "distance": CalculDistance(position, position_ecole) });
         }
-        ListeEcoleDistances.sort(function (a, b) {
+        ListeEcoleDistances.sort(function(a, b) {
             return a.distance - b.distance;
         });
         return ListeEcoleDistances;
@@ -221,17 +221,16 @@ function SwapOrder() {
         if (navigator.geolocation) { //si le navigateur prends en charge la géolocalisation
             navigator.geolocation.getCurrentPosition(PositionRecue, PositionNONRecue);
         }
-    }
-    else {
+    } else {
         document.getElementById('EcolesIngesTab').style.opacity = 0;
-        setTimeout(function () {
+        setTimeout(function() {
             for (let ecole in BDEcoles) {
                 document.getElementById(ecole).style.order = 0;
                 document.getElementById(ecole).getElementsByClassName("distance")[0].textContent = "";
                 i++;
             }
         }, 500);
-        setTimeout(function () {
+        setTimeout(function() {
             document.getElementById('EcolesIngesTab').style.opacity = 1;
         }, 1000);
     }

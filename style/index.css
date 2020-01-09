@@ -28,15 +28,19 @@ h2 {
         flex-basis: 40%;
         margin-bottom: 1em;
     }
+    .ScrollBack {
+        bottom: 1em;
+        right: 1em;
+    }
 }
 
 @media only screen and (max-width: 700px) {
     .responsive {
-        flex-basis: 90%;
+        flex-basis: 80%;
         margin-bottom: 2em;
     }
     .navbar a {
-        padding-left: 10%;
+        padding-left: 5%;
     }
     .contact {
         margin-left: 0;
@@ -45,6 +49,7 @@ h2 {
         flex-basis: 100%;
     }
     .switch {
-        margin-right: 10%;
+        margin-right: 5%;
     }
+    .
 }

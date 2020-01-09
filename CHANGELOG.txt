@@ -46,3 +46,9 @@ Il y a tellement de changement que je vais certainement en oublier mais les plus
 - Ajout des débouchés
 - Ajout du logo dans l'onglet
 - Et bien d'autres...
+
+v2.1
+Certainement la dernière maj 
+- Ajout d'un bouton pour revenir en haut de la page
+- Ajustement des marges du slider navbar afin d'éviter un retour à la ligne pour les écrans de 4 pouces
+- Ajustement des couleurs

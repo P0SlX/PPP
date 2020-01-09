@@ -58,22 +58,24 @@ div>button {
     margin-right: 15%;
 }
 
-#ScrollBack {
-    display: none;
+.ScrollBack {
     position: fixed;
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: rgb(15, 123, 231); /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    z-index: 99;
+    bottom: 2em;
+    right: 3em;
+    border: none;
+    outline: none;
+    background-color: rgb(15, 123, 231);
+    color: white;
+    cursor: pointer;
+    padding: 0.5em;
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition-duration: 0.3s;
 }
-  
-#ScrollBack:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+
+.ScrollBack:hover {
+    background-color: #555;
 }
