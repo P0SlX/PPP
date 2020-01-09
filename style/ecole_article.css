@@ -59,13 +59,14 @@ div>button {
 }
 
 .ScrollBack {
+    display: none;
     position: fixed;
     z-index: 99;
     bottom: 2em;
     right: 3em;
     border: none;
     outline: none;
-    background-color: rgb(15, 123, 231);
+    background-color: #0F71D6;
     color: white;
     cursor: pointer;
     padding: 0.5em;
@@ -77,5 +78,5 @@ div>button {
 }
 
 .ScrollBack:hover {
-    background-color: #555;
+    background-color: rgb(107, 168, 255);
 }

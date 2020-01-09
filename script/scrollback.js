@@ -6,7 +6,7 @@ function scrollFunction() {
     /*
     Dès que l'utilisateur va scrol de 80px, le bouton s'affiche.
     */
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         ScrollBackBouton.style.display = "block";
     } else {
         ScrollBackBouton.style.display = "none";
